@@ -10,8 +10,10 @@ x
 
 # build a plot
 
-p <- ggplot(data_heatwaves, mapping = aes(x = year, y = temp_mean,
-                                          group = paste(fishery, eu_rnpa))) + geom_col()
+p <- ggplot(data_heatwaves,
+            mapping = aes(x = year, y = temp_mean,
+                                          group = paste(fishery, eu_rnpa))) +
+  geom_col()
 
 p
 
