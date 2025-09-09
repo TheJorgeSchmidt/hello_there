@@ -15,8 +15,14 @@ p <- ggplot(data_heatwaves,
                                           group = paste(fishery, eu_rnpa))) +
   geom_col()
 
+q <- ggplot(data_heatwaves,
+            mapping = aes(x = mhw_events, y = temp_mean,
+                                          group = paste(fishery, eu_rnpa))) +
+  geom_col() + theme_classic()
+
 p
 
+q
 # export my plot
 ggsave(plot = p,
        filename = "results/img/cumul_bar.png")
